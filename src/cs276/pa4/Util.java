@@ -329,7 +329,7 @@
         }
         return tfs;
       }
-
+      /*
       public static double[] getInstance(Query q, Document d, Map<String, Double> idfs, Map<String, Map<String, Double>> rel){
         double[] instance=new double[features.length+1];
 
@@ -382,7 +382,7 @@
           }
           return result;
       }
-
+    */
       public static void main(String[] args) {
         try {
           System.out.print(loadRelData(args[0]));

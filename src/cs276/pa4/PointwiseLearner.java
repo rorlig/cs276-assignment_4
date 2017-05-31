@@ -18,12 +18,7 @@ public class PointwiseLearner extends Learner {
   @Override
   public Instances extractTrainFeatures(String train_data_file,
       String train_rel_file, Map<String, Double> idfs) {
-    
-    /*
-     * @TODO: Below is a piece of sample code to show 
-     * you the basic approach to construct a Instances 
-     * object, replace with your implementation. 
-     */
+
     Map<Query,List<Document>> queryDocData=null;
     Map<String, Map<String, Double>> queryDocRel=null;
     try {
@@ -46,12 +41,18 @@ public class PointwiseLearner extends Learner {
     dataset = new Instances("train_dataset", attributes, 0);
     
     /* Add data */
+    Feature feature=new Feature(idfs);
 
     for(Query q:queryDocData.keySet()){
       for (Document d:queryDocData.get(q)){
+        /*
         double[] instance=Util.getInstance(q,d,idfs,queryDocRel);
         Instance inst = new DenseInstance(1.0, instance);
         dataset.add(inst);
+        */
+        double[] feat=feature.extractFeatureVector(d,q);
+        dataset.add(new DenseInstance(1.0,feature.addPreictedVarToFeatureVec(feat,
+                queryDocRel.get(q.query).get(d.url))));
       }
     }
     /* Set last attribute as target */
@@ -87,11 +88,16 @@ public class PointwiseLearner extends Learner {
       dataset = new Instances("test_dataset", attributes, 0);
       Map<Query,Map<Document,Integer>> indexMap=new HashMap<>();
       int index=0;
+      Feature feature = new Feature(idfs);
       for (Query q:testData.keySet()){
         Map<Document, Integer> docMap = new HashMap<>();
         for(Document d:testData.get(q)){
+          /*
           double[] instance=Util.getInstance(q,d,idfs,null);
           dataset.add(new DenseInstance(1.0,instance));
+          */
+          double[] feat=feature.extractFeatureVector(d,q);
+          dataset.add(new DenseInstance(1.0,feature.addPreictedVarToFeatureVec(feat,0.0)));
           docMap.put(d, index);
           ++index;
         }

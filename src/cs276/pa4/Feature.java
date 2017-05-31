@@ -47,6 +47,15 @@ public class Feature {
     return result;
   }
 
+  public double[] addPreictedVarToFeatureVec(double[] covs, double val){
+    double[] vector=new double[covs.length+1];
+    for (int i=0;i<covs.length;i++){
+      vector[i]=covs[i];
+    }
+    vector[covs.length]=val;
+    return vector;
+  }
+
   /* Generate query vector */
   public Map<String,Double> getQueryVec(Query q) {
     /* Count word frequency within the query, in most cases should be 1 */
