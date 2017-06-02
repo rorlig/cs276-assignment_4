@@ -231,13 +231,14 @@ public class PairwiseLearner extends Learner {
                 try {
                     prediction = model.classifyInstance(testInstance.get(index));
                     if (prediction == 0) {
-
                         incrementOrInit(documentCountMap, documentPair.getFirst());
-//                        documentCountMap.put(documentPair.getFirst(), )
+                        addIfNotInMap(documentCountMap, documentPair.getSecond());
                     } else {
                         incrementOrInit(documentCountMap, documentPair.getSecond());
-
+                        addIfNotInMap(documentCountMap, documentPair.getFirst());
                     }
+
+
 
                 } catch (Exception e) {
 //                    System.err.println(e);
@@ -296,7 +297,11 @@ public class PairwiseLearner extends Learner {
         return rankings;
     }
 
-
+    private void addIfNotInMap(Map<Document, Integer> documentCountMap, Document key) {
+        if (documentCountMap.get(key)==null) {
+            documentCountMap.put(key, 0);
+        }
+    }
 
 
     private static <K, V extends Comparable<? super V>> Map<K, V>

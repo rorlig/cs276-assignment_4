@@ -3,6 +3,8 @@ package cs276.pa4;
 import weka.classifiers.Classifier;
 import weka.classifiers.functions.LibSVM;
 import weka.core.*;
+import weka.filters.Filter;
+import weka.filters.unsupervised.attribute.Standardize;
 
 import java.util.*;
 
@@ -84,13 +86,13 @@ public class AdvancedLearner extends Learner {
             queryInstanceListMap.put(q, instanceList);
         }
 //        //Standardize the data
-//        Standardize filter = new Standardize();
-//        try {
-//            filter.setInputFormat(dataset);
-//            dataset = Filter.useFilter(dataset, filter);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        Standardize filter = new Standardize();
+        try {
+            filter.setInputFormat(dataset);
+            dataset = Filter.useFilter(dataset, filter);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         Instances diff_dataset=new Instances("diff_dataset",attributes,0);
         //building document pair indexes
         Map<Query, Map<Pair<Document,Document>, Integer>> pairwise_map=new HashMap<>();
@@ -169,11 +171,12 @@ public class AdvancedLearner extends Learner {
                 queryInstanceListMap.put(q, instanceList);
             }
 
-            /*
+
             Standardize filter = new Standardize();
+
             filter.setInputFormat(dataset);
             dataset = Filter.useFilter(dataset, filter);
-            */
+
 
             Instances diff_dataset=new Instances("diff_dataset",attributes,0);
             //building document pair indexes
@@ -242,9 +245,13 @@ public class AdvancedLearner extends Learner {
                     if (prediction == 0) {
 
                         incrementOrInit(documentCountMap, documentPair.getFirst());
+                        addIfNotInMap(documentCountMap, documentPair.getSecond());
+
 //                        documentCountMap.put(documentPair.getFirst(), )
                     } else {
                         incrementOrInit(documentCountMap, documentPair.getSecond());
+                        addIfNotInMap(documentCountMap, documentPair.getSecond());
+
 
                     }
 
@@ -305,7 +312,11 @@ public class AdvancedLearner extends Learner {
         return rankings;
     }
 
-
+    private void addIfNotInMap(Map<Document, Integer> documentCountMap, Document key) {
+        if (documentCountMap.get(key)==null) {
+            documentCountMap.put(key, 0);
+        }
+    }
 
 
     private static <K, V extends Comparable<? super V>> Map<K, V>

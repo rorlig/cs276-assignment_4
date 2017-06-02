@@ -26,6 +26,9 @@ query: stanford credits
   url: https://undergrad.stanford.edu/advising/student-guides/can-i-get-credit-ap-ib-or-transfer-courses
     title: can i get credit for ap ib or transfer courses stanford undergrad
     debug: 
+  url: https://www.gsb.stanford.edu/programs/mba/academic-experience/curriculum
+    title: personalized curriculum stanford graduate school of business
+    debug: 
 query: summer classes 2017 
   url: http://summer.stanford.edu/email/2017-info/
     title: information about the 2017 stanford summer session stanford summer
@@ -50,6 +53,9 @@ query: summer classes 2017
     debug: 
   url: https://law.stanford.edu/education/courses/stanford-law-class-schedule-grids/
     title: stanford law class schedule grids courses stanford law school
+    debug: 
+  url: https://summer.stanford.edu/programs/international/international-requirements/
+    title: international requirements stanford summer
     debug: 
 query: mscs admission 
   url: https://cs.stanford.edu/degrees/mscs/mscs_law.php
@@ -79,6 +85,9 @@ query: mscs admission
   url: https://www-cs.stanford.edu/admissions/current-stanford-students/coterminal-program
     title: coterminal program stanford computer science
     debug: 
+  url: https://www-cs.stanford.edu/admissions/ms-versus-phd
+    title: ms versus ph d stanford computer science
+    debug: 
 query: campus police incidents 
   url: http://emergency.stanford.edu/2015/10/police-activity-101715-655-pm/
     title: police activity 10 17 15 6 55 pm emergency information
@@ -106,6 +115,9 @@ query: campus police incidents
     debug: 
   url: https://police.stanford.edu/security-report.html
     title: stanford safety security and fire report clery act
+    debug: 
+  url: https://web.stanford.edu/dept/news/pr/02/batterysuspect612.html
+    title: stern hall prowler matches description of may 25 sexual battery suspect police say 6 02
     debug: 
 query: how are stanford dorms 
   url: http://postdocs.stanford.edu/handbook/housing.html
@@ -135,6 +147,9 @@ query: how are stanford dorms
   url: https://rde.stanford.edu/studenthousing/lagunita-court
     title: lagunita court stanford r&de
     debug: 
+  url: https://rde.stanford.edu/studenthousing/single-graduate-housing
+    title: single graduate housing stanford r&de
+    debug: 
 query: computer science dean 
   url: https://www-cs.stanford.edu/
     title: stanford computer science
@@ -156,6 +171,9 @@ query: computer science dean
     debug: 
   url: https://forum.stanford.edu/research/profiles.php
     title: stanford computer forum faculty profiles
+    debug: 
+  url: https://www-cs.stanford.edu/directory/faculty
+    title: faculty stanford computer science
     debug: 
 query: stanford ap credit chart 
   url: https://registrar.stanford.edu/students/transfer-credit-and-advanced-placement/advanced-placement/ap-credit-chart
@@ -182,6 +200,9 @@ query: stanford ap credit chart
   url: https://undergrad.stanford.edu/advising/freshman/new-student-orientation-nso/placement-tests-and-diagnostics
     title: placement tests & diagnostics for new students stanford undergrad
     debug: 
+  url: https://web.stanford.edu/dept/registrar/bulletin1112/4883.htm
+    title: advanced placement
+    debug: 
 query: stanford commencement 
   url: https://commencement.stanford.edu/
     title: commencement weekend
@@ -207,6 +228,9 @@ query: stanford commencement
   url: https://commencement.stanford.edu/plan-your-visit/parking
     title: weekend parking and transportation commencement weekend
     debug: 
+  url: https://www.gsb.stanford.edu/visit/commencement
+    title: commencement stanford graduate school of business
+    debug: 
 query: stanford visitor parking 
   url: http://visit.stanford.edu/plan/parking.html
     title: parking stanford university
@@ -231,6 +255,9 @@ query: stanford visitor parking
     debug: 
   url: https://dschool.stanford.edu/groups/dhandbook/wiki/c68f5/Visitors.html
     title: visitors
+    debug: 
+  url: https://naismet2016.stanford.edu/directions
+    title: directions naismet2016
     debug: 
 query: old union reserve room 
   url: https://studentaffairs.stanford.edu/room-reservations/old-union-room-reservations
@@ -260,6 +287,9 @@ query: old union reserve room
   url: https://sal.stanford.edu/plan-event/event-registration
     title: event registration student activities and leadership
     debug: 
+  url: https://sal.stanford.edu/plan-event/find-venue/choosing-event-space-cardinalsync
+    title: choosing an event space in cardinalsync student activities and leadership
+    debug: 
 query: tresidder union hours 
   url: https://rde.stanford.edu/hospitality/subway-tresidder
     title: subway at tresidder stanford r&de
@@ -285,6 +315,9 @@ query: tresidder union hours
   url: https://registrar.stanford.edu/staff/registrars-office-directory
     title: registrar's office directory registrar's office
     debug: 
+  url: https://uit.stanford.edu/service/campuscard/cardoffice
+    title: campus card office university it
+    debug: 
 query: bike registration 
   url: https://transportation.stanford.edu/bicycle/learn-about-bike-safety/register-a-bike
     title: register a bike stanford parking & transportation services
@@ -303,6 +336,9 @@ query: bike registration
     debug: 
   url: https://transportation.stanford.edu/maps-resources-access/sustainable-transportation/free-and-discounted-stanford-transportation-programs
     title: free and discounted stanford transportation programs stanford parking & transportation services
+    debug: 
+  url: https://sites.stanford.edu/undergrad-dev/advising/freshman/new-student-orientation-nso/nso-student-events-calendar/tuesday-september-15
+    title: tuesday september 20 stanford undergrad
     debug: 
 query: computational linguistics research 
   url: https://linguistics.stanford.edu/research/computational-linguistics
@@ -332,6 +368,9 @@ query: computational linguistics research
   url: https://symsys.stanford.edu/viewing/htmldocument/22074
     title: symbolic systems stanford phd studentships university of edinburgh
     debug: 
+  url: https://web.stanford.edu/~gdoyle/papers/doyle-2014-art-talk.pdf
+    title: computational linguistics and learning from big data
+    debug: 
 query: stanford dining holiday hours 
   url: https://rde.stanford.edu/dining/locations-hours
     title: locations & hours stanford r&de
@@ -360,6 +399,9 @@ query: stanford dining holiday hours
   url: https://web.stanford.edu/dept/rde/cgi-bin/drupal/rde/calendar/
     title: residential & dining enterprises calendar
     debug: 
+  url: https://web.stanford.edu/dept/rde/cgi-bin/drupal/rde/calendar/taxonomy/term/4
+    title: residential & dining enterprises calendar
+    debug: 
 query: summer courses 
   url: https://ohs.stanford.edu/student-life/summer-stanford
     title: summer stanford stanford online high school
@@ -384,6 +426,9 @@ query: summer courses
     debug: 
   url: https://summer.stanford.edu/campus-life/regulations-requirements/
     title: regulations and requirements stanford summer
+    debug: 
+  url: https://summerinstitutes.stanford.edu/courses
+    title: courses pre collegiate summer institutes
     debug: 
 query: places to study 
   url: http://library.stanford.edu/using/study
@@ -413,6 +458,9 @@ query: places to study
   url: https://library.stanford.edu/englib/using-terman-library/visitor-information
     title: visitor information stanford university libraries
     debug: 
+  url: https://library.stanford.edu/using/equipment/color-printer
+    title: color printer stanford university libraries
+    debug: 
 query: pool summer opening hours 
   url: http://web.stanford.edu/group/masters/pool.html
     title: stanford masters swimming pool & parking information
@@ -440,6 +488,9 @@ query: pool summer opening hours
     debug: 
   url: https://web.stanford.edu/dept/IUC/cgi-bin/resources/other-documents/FAQ%209.2016.pdf
     title: iuc faq 9 2016
+    debug: 
+  url: https://web.stanford.edu/dept/news/stanfordtoday/ed/9605/9605sf.html
+    title: 9605sf
     debug: 
 query: wilbur dinner 
   url: https://rde.stanford.edu/dining/wilbur-dining
@@ -469,6 +520,9 @@ query: wilbur dinner
   url: https://web.stanford.edu/dept/rde/cgi-bin/drupal/rde/calendar/event/dining-halls-close-winter-break-0
     title: residential & dining enterprises calendar
     debug: 
+  url: https://web.stanford.edu/dept/rde/dining/pdfs/RFRA_2010Guidebook.pdf
+    title: guidebook
+    debug: 
 query: it resources 
   url: http://ether.stanford.edu/new_computer.html
     title: dr chu new resident computer orientation ether resources for anesthesia research and education stanford university school of medicine
@@ -497,6 +551,9 @@ query: it resources
   url: https://ee.stanford.edu/student-resources/CA-appointments/helpful-information/support-systems
     title: ca support systems stanford ee
     debug: 
+  url: https://ee.stanford.edu/student-resources/student-payroll
+    title: payroll information for ras cas and graders stanford ee
+    debug: 
 query: memorial church 
   url: http://web.stanford.edu/group/religiouslife/cgi-bin/wordpress/memorial-church/history/
     title: office for religious life about memorial church
@@ -524,6 +581,9 @@ query: memorial church
     debug: 
   url: https://events.stanford.edu/events/617/61741
     title: om under the dome yoga in memorial church
+    debug: 
+  url: https://religiouslife.stanford.edu/
+    title: home office for religious life
     debug: 
 query: alice in wonderland 
   url: https://searchworks.stanford.edu/view/6306177
@@ -578,6 +638,9 @@ query: matlab ssh options
   url: https://mailman.stanford.edu/pipermail/farmshare-discuss/2012-December/000223.html
     title: farmshare discuss a question about launching gui from corn server
     debug: 
+  url: https://web.stanford.edu/group/farmshare/cgi-bin/wiki/index.php/FarmShare_tutorial
+    title: farmshare tutorial farmshare
+    debug: 
 query: trump 
   url: http://fsi.stanford.edu/news/seasoned-journalist-analyzes-us-china-relations-under-trump
     title: fsi seasoned journalist analyzes us china relations under trump
@@ -605,6 +668,9 @@ query: trump
     debug: 
   url: http://fsi.stanford.edu/publication/donald-trumps-trade-policy-back-future
     title: fsi donald trump's trade policy back to the future
+    debug: 
+  url: https://swap.stanford.edu/20130628201224/https://wwws.whitehouse.gov/petitions
+    title: petition the white house on the issues that matter to you we the people your voice in our government
     debug: 
 query: vaden hours 
   url: https://vaden.stanford.edu/about/hours
@@ -665,6 +731,9 @@ query: stanford dining hall
   url: https://rde.stanford.edu/dining/summer-2016
     title: summer 2016 stanford r&de
     debug: 
+  url: https://rde.stanford.edu/dining/thanksgiving-hours
+    title: thanksgiving hours stanford r&de
+    debug: 
 query: stanford dining hall meal plan 
   url: https://rde.stanford.edu/dining/mealplans
     title: meal plans stanford r&de
@@ -693,6 +762,9 @@ query: stanford dining hall meal plan
   url: http://stanford.edu/dept/rde/cgi-bin/drupal/dining/sites/default/files/pdfs/RFRA_2013Guidebook_050714.pdf
     title: guidebook
     debug: 
+  url: https://rde.stanford.edu/hospitality/cardinaldollarspecial
+    title: cardinal dollars stanford r&de
+    debug: 
 query: credit cost 
   url: https://searchworks.stanford.edu/view/8276159
     title: the cost of credit regulation preemption and industry abuses in searchworks
@@ -717,6 +789,9 @@ query: credit cost
     debug: 
   url: https://web.stanford.edu/dept/registrar/bulletin1112/4835.htm
     title: tuition fees and housing
+    debug: 
+  url: https://www.gsb.stanford.edu/programs/mba/financial-aid/international-students
+    title: financial aid for international students stanford graduate school of business
     debug: 
 query: axess 
   url: https://axess.sahr.stanford.edu/
@@ -745,6 +820,9 @@ query: axess
     debug: 
   url: https://undergrad.stanford.edu/advising/student-guides/how-do-i-enroll-course
     title: how do i enroll in a course stanford undergrad
+    debug: 
+  url: https://web.stanford.edu/group/studentservicescenter/faqs.html
+    title: stanford university student services center current faqs
     debug: 
 query: lathrop library hours 
   url: http://library.stanford.edu/libraries/lathrop/about
@@ -805,6 +883,9 @@ query: caltrain go pass program
   url: https://sustainability-year-in-review.stanford.edu/2016/topics/communications-outreach/
     title: communications & outreach sustainability year in review 2016
     debug: 
+  url: https://transportation-forms.stanford.edu/pilotgopass/gopass-pilot-eligibility.php
+    title: eligibility for pilot programs
+    debug: 
 query: database courses 
   url: http://infolab.stanford.edu/~ullman/fcdb/aut07/2006/lecture_notes/16a-database-courses.html
     title: database courses
@@ -829,6 +910,9 @@ query: database courses
     debug: 
   url: https://class.stanford.edu/courses/Engineering/db/2014_1/about
     title: introduction to databases stanford lagunita
+    debug: 
+  url: https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about
+    title: self paced stanford lagunita
     debug: 
 query: marguerite shuttle 
   url: https://transportation.stanford.edu/marguerite
@@ -858,6 +942,9 @@ query: marguerite shuttle
   url: https://transportation.stanford.edu/marguerite/slac
     title: slac stanford parking & transportation services
     debug: 
+  url: https://transportation.stanford.edu/marguerite/x
+    title: line x counter clockwise stanford parking & transportation services
+    debug: 
 query: hoover tower entrance price 
   url: http://visit.stanford.edu/plan/guides/hoover.html
     title: hoover tower stanford university
@@ -885,6 +972,9 @@ query: hoover tower entrance price
     debug: 
   url: https://ed.stanford.edu/in-the-media/no-rich-child-left-behind
     title: no rich child left behind commentary by sean reardon stanford graduate school of education
+    debug: 
+  url: https://lbre.stanford.edu/sites/default/files/parking_and_circulation_map_0.pdf
+    title: inset 2 inset 1
     debug: 
 query: stanford tuition tax form 
   url: https://bechtel.stanford.edu/practical-matters/taxes/general-tax-information
@@ -914,6 +1004,9 @@ query: stanford tuition tax form
   url: https://sfs.stanford.edu/taxes
     title: taxes student financial services
     debug: 
+  url: https://web.stanford.edu/group/fms/fingate/staff/supptstudents/res_jobaid.html
+    title: fingate supporting students resources & job aids
+    debug: 
 query: student discount 
   url: http://web.stanford.edu/group/livelyarts/Web/0506/BBEDIT%20Files/discount
     title: 
@@ -935,6 +1028,9 @@ query: student discount
     debug: 
   url: https://arts.stanford.edu/for-students/events-activities/
     title: events & activities stanford arts
+    debug: 
+  url: https://transportation.stanford.edu/maps-resources-access/sustainable-transportation/free-and-discounted-stanford-transportation-programs
+    title: free and discounted stanford transportation programs stanford parking & transportation services
     debug: 
 query: change meal plan stanford 
   url: https://rde.stanford.edu/dining/mealplans
@@ -963,6 +1059,9 @@ query: change meal plan stanford
     debug: 
   url: https://summer.stanford.edu/programs/international/housing-dining/
     title: housing & dining stanford summer
+    debug: 
+  url: https://web.stanford.edu/dept/registrar/bulletin1112/4853.htm
+    title: refunds
     debug: 
 query: winter quarter final schedule 
   url: https://registrar.stanford.edu/students/final-exams/previous-years-exams/winter-quarter-exams-2015-16
@@ -1020,6 +1119,9 @@ query: stanford parking permits
   url: http://postdocs.stanford.edu/incoming_scholars/upon_arrival.html
     title: first things first checklist for new postdoctoral scholars information for postdoctural scholars information resources & technology irt stanford university school of medicine
     debug: 
+  url: https://transportation.stanford.edu/orders/
+    title: order or apply
+    debug: 
 query: how many meal plan dollars do i have left 
   url: https://rde.stanford.edu/dining/mealplans
     title: meal plans stanford r&de
@@ -1044,6 +1146,9 @@ query: how many meal plan dollars do i have left
     debug: 
   url: https://statistics.stanford.edu/sites/default/files/Sandstone-and-Tile_Old-Roble.pdf
     title: photo enlarged by 191
+    debug: 
+  url: https://web.stanford.edu/group/axecomm/cgi-bin/wordpress/wp-content/uploads/2015/08/handbook.final_.pdf
+    title: handbook of stanford university
     debug: 
 query: stanford outdoor 
   url: https://explorecourses.stanford.edu/search?view=catalog&academicYear=&page=0&q=OUTDOOR&filter-departmentcode-OUTDOOR=on&filter-coursestatus-Active=on
@@ -1073,6 +1178,9 @@ query: stanford outdoor
   url: http://outdoored.stanford.edu/wp-content/uploads/2013/06/SO-Constitution
     title: stanford university voluntary student organization articles of incorperation article 1
     debug: 
+  url: https://alpineclub.stanford.edu/
+    title: homepage stanford alpine club
+    debug: 
 query: 24 hour study buildings campus 
   url: https://library.stanford.edu/libraries/lathrop/24-hour-study-room
     title: 24 hour study room stanford university libraries
@@ -1097,6 +1205,9 @@ query: 24 hour study buildings campus
     debug: 
   url: https://web.stanford.edu/dept/CTL/cgi-bin/academicskillscoaching/category/time-management/page/9/
     title: time management the duck stops here page 9
+    debug: 
+  url: https://www.gsb.stanford.edu/library/services-facilities/services/faculty
+    title: business library services for stanford gsb faculty stanford graduate school of business
     debug: 
 query: international student center hours 
   url: https://bechtel.stanford.edu/
@@ -1126,6 +1237,9 @@ query: international student center hours
   url: https://ee.stanford.edu/student-resources/CA-appointments/contact
     title: contact information for cas stanford ee
     debug: 
+  url: https://summer.stanford.edu/welcomeweekend/
+    title: welcome weekend 2016 stanford summer
+    debug: 
 query: nearest grocery store 
   url: http://web.stanford.edu/group/aagsa/public/Asian%20restaurants%20and%20grocery%20stores.pdf
     title: asian restaurants and grocery stores
@@ -1150,6 +1264,9 @@ query: nearest grocery store
     debug: 
   url: https://people.stanford.edu/claudeg/sites/default/files/variability-in-community.pdf
     title: variability in community characteristics and spanish speaking children's home language and literacy opportunities
+    debug: 
+  url: https://web.stanford.edu/group/peruanos/informa/faq.htm
+    title: pes faq
     debug: 
 query: magic the gathering 
   url: https://se3.stanford.edu/news/magic-number-holding-warming-under-2-c-goal-it-may-already-be-too-late
@@ -1178,6 +1295,9 @@ query: magic the gathering
     debug: 
   url: https://quizbowl.stanford.edu/archive/FraudBowl/swat2pak.html
     title: here's the packet for this sunday's trash tournament for the team
+    debug: 
+  url: https://web.stanford.edu/group/sgs/Gametypes.html
+    title: game genres
     debug: 
 query: meal plan dollars 
   url: https://rde.stanford.edu/dining/mealplans
@@ -1235,6 +1355,9 @@ query: stanford judo
   url: https://web.stanford.edu/group/jujitsu/Class_Information/history.html
     title: stanford jujitsu history
     debug: 
+  url: https://web.stanford.edu/group/jujitsu/Zen_Budokai/biographies.html
+    title: stanford jujitsu biographies
+    debug: 
 query: dining menus 
   url: http://web.stanford.edu/dept/rde/dining/facebooklanding.html
     title: stanford dining home facebook
@@ -1262,6 +1385,9 @@ query: dining menus
     debug: 
   url: https://web.stanford.edu/dept/rde/dining/pdfs/StanfordDining_hours2011-12.pdf
     title: stanford dining
+    debug: 
+  url: https://www.gsb.stanford.edu/sites/gsb/files/menu-schwab-catering.pdf
+    title: schwab catering menu
     debug: 
 query: scpd lecture videos 
   url: http://scpd.stanford.edu/free-learning/webinars/donald-knuth-lectures/cs144c-classroom-lecture-about-disk-storage-and-b-0
@@ -1291,6 +1417,9 @@ query: scpd lecture videos
   url: http://scpd.stanford.edu/university-online-courses.jsp?gclid=CKnw4Nuaj64CFSwDQAodlCz7gg
     title: university online courses stanford university
     debug: 
+  url: http://web.stanford.edu/class/cs246/faq.html
+    title: stanford cs246 faq
+    debug: 
 query: dining hours 
   url: https://rde.stanford.edu/dining/dining-hall-hours
     title: dining hall hours stanford r&de
@@ -1318,6 +1447,9 @@ query: dining hours
     debug: 
   url: https://rde.stanford.edu/dining/late-nite-lakeside
     title: late nite at lakeside stanford r&de
+    debug: 
+  url: https://rde.stanford.edu/hospitality/russo-caf%C3%A9
+    title: russo café stanford r&de
     debug: 
 query: dining for food 
   url: https://rde.stanford.edu/dining/arrillaga-family-dining-commons
@@ -1347,6 +1479,9 @@ query: dining for food
   url: https://rde.stanford.edu/dining/culinary-standards
     title: culinary standards stanford r&de
     debug: 
+  url: https://rde.stanford.edu/dining/nutrition-week
+    title: nutrition week stanford r&de
+    debug: 
 query: spring semester academic calendar 
   url: https://continuingstudies.stanford.edu/policies/policies-academic-calendar
     title: policies & info academic calendar
@@ -1375,6 +1510,9 @@ query: spring semester academic calendar
   url: https://rde.stanford.edu/studenthousing/academic-breaks
     title: academic breaks stanford r&de
     debug: 
+  url: https://www.gsb.stanford.edu/organizations/recruit/finding-candidates/calendar
+    title: recruiting calendar stanford graduate school of business
+    debug: 
 query: memorial court 
   url: http://news.stanford.edu/thedish/2015/05/31/burghers-cant-get-cell-coverage-in-memorial-court/
     title: burghers can t get cell coverage in memorial court the dish
@@ -1396,6 +1534,9 @@ query: memorial court
     debug: 
   url: http://news.stanford.edu/thedish/2014/11/11/stanfords-annual-tribute-to-veterans/
     title: stanford's annual tribute to veterans the dish
+    debug: 
+  url: https://cardinalatwork.stanford.edu/events/maternity-child-care-benefits-seminar-11
+    title: maternity & child care benefits workshop cardinal at work
     debug: 
 query: 2017 commencement schedule 
   url: https://commencement.stanford.edu/events/class
@@ -1425,6 +1566,9 @@ query: 2017 commencement schedule
   url: https://commencement.stanford.edu/info/parents
     title: information for parents commencement weekend
     debug: 
+  url: https://registrar.stanford.edu/resources-and-help/stanford-academic-calendar-2016-17/future-academic-calendars
+    title: future academic calendars registrar's office
+    debug: 
 query: grade replacement policy 
   url: http://cepa.stanford.edu/news/tenure-or-turnover
     title: tenure or turnover center for education policy analysis
@@ -1449,6 +1593,9 @@ query: grade replacement policy
     debug: 
   url: https://undergrad.stanford.edu/planning/academic-policies/grading-policies
     title: grades and grading stanford undergrad
+    debug: 
+  url: https://vptl.stanford.edu/teaching-and-learning-innovation/learning-environments/virtual-learning-environments/canvas
+    title: canvas vptl
     debug: 
 query: bruno 
   url: https://ccrma.stanford.edu/people/bruno-tucunduva-ruviaro
@@ -1506,6 +1653,9 @@ query: nobel laureates
   url: https://ed.stanford.edu/news/nobel-laureate-appointed-stanford-professor-physics-and-education
     title: nobel laureate appointed stanford professor of physics and education stanford graduate school of education
     debug: 
+  url: https://www.gsb.stanford.edu/newsroom/school-news/scholes-business-schools-second-nobel-laureate
+    title: scholes is business school's second nobel laureate stanford graduate school of business
+    debug: 
 query: academic calendar 
   url: https://registrar.stanford.edu/resources-and-help/stanford-academic-calendar
     title: stanford academic calendar registrar's office
@@ -1530,6 +1680,9 @@ query: academic calendar
     debug: 
   url: http://exploredegrees.stanford.edu/academiccalendar/academiccalendar.pdf
     title: stanford university
+    debug: 
+  url: https://law.stanford.edu/events/
+    title: events archive stanford law school
     debug: 
 query: harry potter 
   url: https://sparq.stanford.edu/solutions/harry-potter-and-elixir-empathy
@@ -1590,6 +1743,9 @@ query: epidermolysis bullosa dermatology
   url: https://med.stanford.edu/profiles/joyce-teng
     title: joyce teng md phd stanford medicine profiles
     debug: 
+  url: http://stanmed.stanford.edu/2015summer/the-butterfly-effect.html
+    title: the butterfly effect stanford medicine
+    debug: 
 query: cssa 
   url: https://web.stanford.edu/group/CSSA/
     title: cssa redirect page
@@ -1618,6 +1774,9 @@ query: cssa
   url: http://today.slac.stanford.edu/a/2009/12-17.htm
     title: slac today thursday december 17 2009
     debug: 
+  url: https://web.stanford.edu/dept/astro/lists.html
+    title: astronomy mailing lists
+    debug: 
 query: scpd tuition 
   url: https://registrar.stanford.edu/students/tuition-and-fees/related-links-and-previous-years-tuition/tuition-and-fees-2015-16/summer
     title: summer quarter tuition 2015 16 registrar's office
@@ -1642,6 +1801,9 @@ query: scpd tuition
     debug: 
   url: http://scpd.stanford.edu/public/category/courseCategoryCertificateProfile.do?method=load&certificateId=1240861
     title: computer science ms degree stanford center for professional development
+    debug: 
+  url: https://ed.stanford.edu/admissions/financing/masters
+    title: financing your education master's programs stanford graduate school of education
     debug: 
 query: cs276 slides 
   url: http://cs276.stanford.edu/
@@ -1669,6 +1831,9 @@ query: cs276 slides
     title: title
     debug: 
   url: https://web.stanford.edu/class/cs276/handouts/lecture6-tfidf.ppt
+    title: title
+    debug: 
+  url: https://web.stanford.edu/class/cs276/handouts/lecture8-evaluation.ppt
     title: title
     debug: 
 query: nvidia auditorium 
@@ -1730,6 +1895,9 @@ query: meal plan cost
   url: https://summercollege.stanford.edu/gateway/housing-dining
     title: housing & dining high school summer college
     debug: 
+  url: https://summercollege.stanford.edu/gateway/understanding-bill
+    title: understanding the bill high school summer college
+    debug: 
 query: dining meal plan refund 
   url: https://rde.stanford.edu/dining/graduate-and-post-doc-meal-plans
     title: graduate and post doc meal plans stanford r&de
@@ -1789,6 +1957,9 @@ query: stanford wilbur front desk
   url: https://resed.stanford.edu/residences/find-house/soto
     title: soto residential education
     debug: 
+  url: https://undergrad.stanford.edu/advising/approaching/approaching-stanford/moving-farm/getting-campus
+    title: getting to campus stanford undergrad
+    debug: 
 query: which cafe opens on sunday 
   url: http://pem.stanford.edu/parents/information.html
     title: information pediatric emergency medicine stanford medicine
@@ -1816,6 +1987,9 @@ query: which cafe opens on sunday
     debug: 
   url: https://rde.stanford.edu/hospitality/axe-palm
     title: the axe & palm stanford r&de
+    debug: 
+  url: https://web.stanford.edu/~sommer/ASL-local.html
+    title: 
     debug: 
 query: piazza registration without stanford email 
   url: http://alumni.stanford.edu/content/travel-study/brochures/2017/italy_2017_06.pdf
@@ -1845,6 +2019,9 @@ query: piazza registration without stanford email
   url: https://web.stanford.edu/class/me328/syllabus.pdf
     title: me 328 medical robotics syllabus as of september 24 2016 autumn quarter 2016 course times locations lectures mondays and w
     debug: 
+  url: https://web.stanford.edu/class/stats202/scpd.html
+    title: stats 202 stanford university
+    debug: 
 query: change address in axess 
   url: https://axess.sahr.stanford.edu/
     title: welcome stanford axess
@@ -1869,6 +2046,9 @@ query: change address in axess
     debug: 
   url: https://siw.stanford.edu/bsiw-program/student-life/preparing-go
     title: preparing to go stanford in washington
+    debug: 
+  url: https://uit.stanford.edu/emailcalendar
+    title: email and calendar university it
     debug: 
 query: christopher manning 
   url: http://nlp.stanford.edu/manning/papers/
@@ -1898,6 +2078,9 @@ query: christopher manning
   url: http://nlp.stanford.edu/IR-book/
     title: introduction to information retrieval
     debug: 
+  url: http://nlp.stanford.edu/manning/courses/ling289/logistic.pdf
+    title: logistic regression with r
+    debug: 
 query: how to go to city center 
   url: http://cancer.stanford.edu/information/cancerDiagnosis/
     title: cancer center stanford health care
@@ -1926,6 +2109,9 @@ query: how to go to city center
   url: https://transportation.stanford.edu/transit/bus-and-light-rail
     title: bus and light rail stanford parking & transportation services
     debug: 
+  url: https://transportation.stanford.edu/transit/community-shuttles
+    title: community shuttles stanford parking & transportation services
+    debug: 
 query: football schedule 
   url: http://tusb.stanford.edu/tag/stanford-football
     title: stanford football the unofficial stanford blog
@@ -1944,6 +2130,9 @@ query: football schedule
     debug: 
   url: https://web.stanford.edu/group/ttsclasses/cgi-bin/techietips/?cat=141
     title: university it technology training techie tips calendar
+    debug: 
+  url: https://www.stanford.edu/group/axecomm/cgi-bin/wordpress/?page_id=59
+    title: stanford axe committee history & tradition
     debug: 
 query: spring drop deadline 
   url: http://exploredegrees.stanford.edu/academiccalendar/
@@ -2004,6 +2193,9 @@ query: sublets at stanford
   url: https://rde.stanford.edu/studenthousing/sublicensing-within-gender-neutral-apartment
     title: sublicensing within a gender neutral apartment stanford r&de
     debug: 
+  url: https://spcs.stanford.edu/jobs/summer/faq
+    title: faq stanford pre collegiate studies
+    debug: 
 query: best tour spot at stanford 
   url: http://outdoored.stanford.edu/spot/
     title: stanford pre orientation trips spot adventure programs
@@ -2031,6 +2223,9 @@ query: best tour spot at stanford
     debug: 
   url: https://live.stanford.edu/plan-your-visit/directions-parking
     title: directions and parking stanford live
+    debug: 
+  url: https://visit.stanford.edu/plan/guides/undergrad.html
+    title: prospective undergraduates stanford university
     debug: 
 query: arrillaga dining hours 
   url: https://rde.stanford.edu/dining/dining-ambassadors-dining-intern-program
@@ -2060,6 +2255,9 @@ query: arrillaga dining hours
   url: https://rde.stanford.edu/dining/summer-2016
     title: summer 2016 stanford r&de
     debug: 
+  url: https://familyweekend.stanford.edu/residence-dining-hall-lunch-brunch
+    title: 
+    debug: 
 query: stanford history major requirements 
   url: http://exploredegrees.stanford.edu/schoolofhumanitiesandsciences/history/
     title: history stanford university
@@ -2087,6 +2285,9 @@ query: stanford history major requirements
     debug: 
   url: https://history.stanford.edu/people/robert-crews
     title: robert crews department of history
+    debug: 
+  url: https://majors.stanford.edu/
+    title: explore majors majors
     debug: 
 query: marguerite schedule 
   url: https://transportation.stanford.edu/marguerite
@@ -2116,6 +2317,9 @@ query: marguerite schedule
   url: https://transportation.stanford.edu/marguerite/y
     title: line y clockwise stanford parking & transportation services
     debug: 
+  url: https://transportation.stanford.edu/transit/express-bus/dumbarton-express
+    title: dumbarton express stanford parking & transportation services
+    debug: 
 query: stanford computer science program sheet 
   url: https://cs.stanford.edu/degrees/mscs/programsheets/
     title: 
@@ -2143,6 +2347,9 @@ query: stanford computer science program sheet
     debug: 
   url: https://www-cs.stanford.edu/degrees/mscs/programsheets/15-16/MSCS-1516-AI-Single.pdf
     title: department of computer science mscs program sheet 2015 16 artificial intelligence specialization single depth
+    debug: 
+  url: https://www-cs.stanford.edu/degrees/mscs/programsheets/psguide1314.pdf
+    title: guide to the mscs program sheet
     debug: 
 query: lathrop library tech desk printing 
   url: https://vptl.stanford.edu/student-resources/computers-printing/tech-desk-lathrop-library
@@ -2172,6 +2379,9 @@ query: lathrop library tech desk printing
   url: https://alumni.stanford.edu/get/page/magazine/article/?article_id=74814
     title: stanford magazine article
     debug: 
+  url: https://biosciences.stanford.edu/current/resources/academic.html
+    title: academic resources and assistance resources current students stanford biosciences phd programs
+    debug: 
 query: cs master tuition 
   url: http://med.stanford.edu/md/mdhandbook/section-7-tuition-and-financial-aid.html
     title: section 7 tuition and financial aid md program stanford medicine
@@ -2199,6 +2409,9 @@ query: cs master tuition
     debug: 
   url: https://www-cs.stanford.edu/academics/phd/phd-requirements
     title: phd requirements stanford computer science
+    debug: 
+  url: https://www.gsb.stanford.edu/programs/mba/financial-aid/cost-summary
+    title: cost summary stanford graduate school of business
     debug: 
 query: financial aid office 
   url: http://financialaid.stanford.edu/
@@ -2228,6 +2441,9 @@ query: financial aid office
   url: http://financialaid.stanford.edu/grad/budget/
     title: the student budget stanford university
     debug: 
+  url: http://financialaid.stanford.edu/loans/
+    title: loans stanford university
+    debug: 
 query: stanford cs courses 
   url: http://exploredegrees.stanford.edu/schoolofengineering/computerscience/
     title: computer science stanford university
@@ -2256,6 +2472,9 @@ query: stanford cs courses
   url: http://online.stanford.edu/course/computer-science-101-Summer-2014
     title: computer science 101 online
     debug: 
+  url: https://see.stanford.edu/Course/CS106A
+    title: stanford engineering everywhere cs106a programming methodology
+    debug: 
 query: campus bike shop hours 
   url: https://sustainable.stanford.edu/sites/default/files/HowTo_DeptBikeSharing.pdf
     title: how to start a departmental bike share program
@@ -2280,6 +2499,9 @@ query: campus bike shop hours
     debug: 
   url: https://summer.stanford.edu/wp-content/uploads/2015/06/2015-Welcome-Booklet.pdf
     title: untitled
+    debug: 
+  url: https://sustainable.stanford.edu/sites/default/files/documents/Sustainable_Stanford_winter10_newsletter.pdf
+    title: newsletter 3
     debug: 
 query: stanford courtesy card application 
   url: https://cardinalatwork.stanford.edu/benefits-rewards/sweeteners/courtesy-recreation-id-cards
@@ -2309,6 +2531,9 @@ query: stanford courtesy card application
   url: https://ev.stanford.edu/partners
     title: graduate student partners in escondido village escondido village stanford university graduate residences
     debug: 
+  url: https://web.stanford.edu/dept/as/mais/applications/stanfordwho/
+    title: stanford university
+    debug: 
 query: are dogs allowed on campus 
   url: http://alumni.stanford.edu/get/page/magazine/article/?article_id=43987
     title: stanford magazine article
@@ -2337,6 +2562,9 @@ query: are dogs allowed on campus
   url: https://rde.stanford.edu/studenthousing/oak-creek-apartments
     title: oak creek apartments stanford r&de
     debug: 
+  url: https://undergrad.stanford.edu/advising/student-guides/guidelines-packing
+    title: guidelines for packing stanford undergrad
+    debug: 
 query: address of stanford 
   url: http://admission.stanford.edu/contact/
     title: contact us stanford university
@@ -2358,6 +2586,9 @@ query: address of stanford
     debug: 
   url: https://www.gsb.stanford.edu/contact
     title: contact us stanford graduate school of business
+    debug: 
+  url: https://www.stanford.edu/contact/
+    title: contact information stanford university
     debug: 
 query: florence moore address 
   url: https://rde.stanford.edu/studenthousing/florence-moore-hall
@@ -2387,6 +2618,9 @@ query: florence moore address
   url: https://stanfordwho.stanford.edu/SWApp/Search.do?search=jaime
     title: public results from stanford people search
     debug: 
+  url: https://stanfordwho.stanford.edu/SWApp/detailAction.do?key=DR074A261%20%20%20%20%20%20%20&search=zhang,%20yi&soundex=&stanfordonly=&affilfilter=everyone&filters=
+    title: public listing from stanford people search
+    debug: 
 query: president stanford 
   url: https://president.stanford.edu/
     title: office of the president marc tessier lavigne stanford's 11th president
@@ -2415,6 +2649,9 @@ query: president stanford
   url: https://news.stanford.edu/features/2016/president-named/tessier-lavigne-cv.pdf
     title: 1 marc tessier lavigne curriculum vitae address born nationality the rockefeller university 1230 york avenue new york ny 1
     debug: 
+  url: https://www.stanford.edu/presidentialsearch/committee.html
+    title: stanford presidential search search committee
+    debug: 
 query: chemistry 
   url: https://chemistry.stanford.edu/people/faculty
     title: faculty department of chemistry
@@ -2442,6 +2679,9 @@ query: chemistry
     debug: 
   url: https://www6.slac.stanford.edu/research/materials-chemistry-and-energy
     title: materials chemistry and energy sciences
+    debug: 
+  url: https://cset.stanford.edu/pd/chem-ex-2
+    title: chemistry experiences and experiments for learning center to support excellence in teaching
     debug: 
 query: stats 305 
   url: http://explorecourses.stanford.edu/print;jsessionid=ptwt9p5iz7yx1bta520e9tklo?q=STATS+200&descriptions=on&catalog=
@@ -2499,6 +2739,9 @@ query: math
   url: https://epgyschools.stanford.edu/doe/
     title: advanced learning by stanford university giftedandtalented com
     debug: 
+  url: https://mathematics.stanford.edu/
+    title: stanford department of mathematics home
+    debug: 
 query: sublet student hours 
   url: https://rde.stanford.edu/studenthousing/sublicensing-places4students-sublet-advertisements
     title: sublicensing places4students sublet advertisements stanford r&de
@@ -2526,6 +2769,9 @@ query: sublet student hours
     debug: 
   url: https://rde.stanford.edu/studenthousing/sublicense
     title: sublicensing in graduate housing stanford r&de
+    debug: 
+  url: https://rde.stanford.edu/studenthousing/undergraduate-housing-newsletter-march-2016
+    title: undergraduate housing newsletter march 2016 stanford r&de
     debug: 
 query: sports in stanford 
   url: http://sportsbusinessacademy.stanford.edu/
@@ -2555,6 +2801,9 @@ query: sports in stanford
   url: http://stanford.edu/group/stanfordflipside/cgi-bin/?cat=943
     title: sports the stanford flipside
     debug: 
+  url: https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&q=SOC+8%3A+Sport%2C+Competition%2C+and+Society&collapse=
+    title: stanford university explore courses
+    debug: 
 query: stanford aoerc pool hours 
   url: https://cardinalrec.stanford.edu/facilities/aoerc/
     title: 
@@ -2582,6 +2831,9 @@ query: stanford aoerc pool hours
     debug: 
   url: https://alumni.stanford.edu/get/page/perks/PoolAndGyms
     title: pool & gyms
+    debug: 
+  url: https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&q=PE+128%3A+Swimming%3A+Beginning+I&collapse=
+    title: stanford university explore courses
     debug: 
 query: 24 hour study room 
   url: https://sul-library-hours-prod.stanford.edu/libraries/lathrop/locations/24-hour-study-room
@@ -2611,6 +2863,9 @@ query: 24 hour study room
   url: http://news.stanford.edu/news/2006/november29/meyer-112906.html
     title: library to fête its 40th anniversary
     debug: 
+  url: https://law.stanford.edu/office-of-student-affairs/frequently-asked-questions/
+    title: frequently asked questions student affairs stanford law school
+    debug: 
 query: bechtel international center hours 
   url: https://bechtel.stanford.edu/
     title: bechtel international center student affairs
@@ -2632,6 +2887,9 @@ query: bechtel international center hours
     debug: 
   url: https://bechtel.stanford.edu/immigration/employment/f-1-employment
     title: f 1 employment bechtel international center
+    debug: 
+  url: https://bechtel.stanford.edu/immigration/visa-types/f-1j-1-student-visas/leave-absence
+    title: leave of absence bechtel international center
     debug: 
 query: stanford healthcare clinics 
   url: http://alumni.stanford.edu/home/rta/click?rtaCode=650142&rtaTarget=http://stanfordhealthcare.org/medical-clinics/general-dermatology-clinic.html?ecid=derm-stanmag-480x150-na-jun15&rtaTcode=650142&rtaType=P&eid=343064531776
@@ -2661,6 +2919,9 @@ query: stanford healthcare clinics
   url: http://news.stanford.edu/2016/04/13/stanford-health-care-names-david-entwistle-president-ceo/
     title: stanford health care names david entwistle president and ceo stanford news
     debug: 
+  url: https://med.stanford.edu/neurology/divisions/neuromuscular/adult-neuromuscular-appointment.html
+    title: neuromuscular program stanford health care
+    debug: 
 query: hoover institute 
   url: http://library.stanford.edu/libraries/hoover/about
     title: hoover institution library stanford university libraries
@@ -2689,6 +2950,9 @@ query: hoover institute
   url: http://news.stanford.edu/thedish/2015/10/19/stanford-scholars-pen-books-on-financial-reform-sakharov/
     title: stanford scholars contribute to books published by the hoover institution press the dish
     debug: 
+  url: https://www.gsb.stanford.edu/faculty-research/faculty/edward-lazear
+    title: edward lazear stanford graduate school of business
+    debug: 
 query: painting studio access in mcmurtry 
   url: https://headsup.stanford.edu/mcmurtry
     title: mcmurtry building headsup
@@ -2713,6 +2977,9 @@ query: painting studio access in mcmurtry
     debug: 
   url: https://arts.stanford.edu/organization/cantor-arts-center/
     title: cantor arts center stanford arts
+    debug: 
+  url: https://arts.stanford.edu/works-from-american-art-giants-enter-stanfords-permanent-collection/
+    title: works from american art giants enter stanford's permanent collection stanford arts
     debug: 
 query: physics 
   url: https://physics.stanford.edu/people/faculty
@@ -2742,6 +3009,9 @@ query: physics
   url: https://web.stanford.edu/group/ughb/cgi-bin/handbook/index.php/Engineering_Physics_Program
     title: engineering physics program undergraduate engineering handbook
     debug: 
+  url: https://www6.slac.stanford.edu/news/2016-02-23-symmetry-abcs-particle-physics.aspx
+    title: the abcs of particle physics symmetry magazine
+    debug: 
 query: stanford campus alert 
   url: http://emergency.stanford.edu/2016/01/community-alert-sexual-battery-11916/
     title: community alert sexual battery 1 19 16 emergency information
@@ -2768,6 +3038,9 @@ query: stanford campus alert
     title: helpsu stanford help request system
     debug: 
   url: https://police.stanford.edu/alertsu.html?alertid=36
+    title: alertsu stanford university emergency and community alerts
+    debug: 
+  url: https://police.stanford.edu/alertsu.html?alertid=52
     title: alertsu stanford university emergency and community alerts
     debug: 
 query: stanford housing cost 
@@ -2797,6 +3070,9 @@ query: stanford housing cost
     debug: 
   url: https://rde.stanford.edu/dining/mealplans
     title: meal plans stanford r&de
+    debug: 
+  url: https://rde.stanford.edu/dining/undergraduate-meal-plans
+    title: undergraduate meal plans stanford r&de
     debug: 
 query: artificial intelligence research 
   url: http://ai.stanford.edu/
@@ -2857,6 +3133,9 @@ query: how many nobel prizes
   url: https://www6.slac.stanford.edu/news/2012-10-12-synchrotron-nobel.aspx
     title: synchrotrons play role in nobel prize research
     debug: 
+  url: https://www6.slac.stanford.edu/news/2015-10-06-symmetry-nobel-prize-awarded-discovery-neutrino-oscillations.aspx
+    title: nobel prize awarded for discovery of neutrino oscillations symmetry magazine
+    debug: 
 query: weight loss 
   url: http://med.stanford.edu/nutrition/nutrition-studies-group/completed-studies/sleep-and-weight-loss.html
     title: effects of adequate sleep on weight loss nutrition studies research group stanford medicine
@@ -2882,6 +3161,9 @@ query: weight loss
   url: https://web.stanford.edu/dept/radiology/radiologysite/site182.html
     title: 26 year old male presents with night sweats weight loss and fever 2 of 3
     debug: 
+  url: http://whatmeds.stanford.edu/medications/bupropion.html
+    title: psychiatric medications the medications what meds stanford university school of medicine
+    debug: 
 query: 24 hour study rooms 
   url: https://library.stanford.edu/libraries/lathrop/24-hour-study-room
     title: 24 hour study room stanford university libraries
@@ -2900,6 +3182,9 @@ query: 24 hour study rooms
     debug: 
   url: http://news.stanford.edu/2015/11/20/meyer-green-space-112015/
     title: stanford's newest open space meyer green opens tuesday
+    debug: 
+  url: https://library-hours.stanford.edu/?week=2019W24
+    title: library hours
     debug: 
 query: cs course listing 
   url: http://cs.stanford.edu/courses/schedules/2015-2016.spring.php
@@ -2929,6 +3214,9 @@ query: cs course listing
   url: https://web.stanford.edu/class/archive/math/math20/math20.1144/schedule.html
     title: math 20 course schedule
     debug: 
+  url: https://web.stanford.edu/class/math42/schedule.html
+    title: math 42 course schedule
+    debug: 
 query: dining plan 
   url: https://rde.stanford.edu/dining/gerhard-casper-dining-commons
     title: gerhard casper dining commons stanford r&de
@@ -2957,6 +3245,9 @@ query: dining plan
   url: https://resed.stanford.edu/life-residences/about-meals-row/what-you-might-expect-your-row-meal-plan
     title: what you might expect from your row meal plan residential education
     debug: 
+  url: https://web.stanford.edu/dept/registrar/bulletin0910/4860.htm
+    title: room and meal plan refunds
+    debug: 
 query: pizza delivery 
   url: http://ldt.stanford.edu/~ischiefe/pizzaioli/solution.html
     title: pizzaioli solution
@@ -2978,6 +3269,9 @@ query: pizza delivery
     debug: 
   url: https://userportal.slac.stanford.edu/userportal1/food-options
     title: food options user portal
+    debug: 
+  url: https://vue.slac.stanford.edu/dining-options
+    title: dining options coming to slac
     debug: 
 query: computer science master 
   url: https://msande.stanford.edu/
@@ -3007,6 +3301,9 @@ query: computer science master
   url: https://www-cs.stanford.edu/admissions/deadlines
     title: deadlines stanford computer science
     debug: 
+  url: https://www-cs.stanford.edu/admissions/visiting-cs
+    title: visiting cs stanford computer science
+    debug: 
 query: why is stanford rated high in school ranking 
   url: http://crowdresearch.stanford.edu/w/img_auth.php/b/bd/Boomerang_2.0.pdf
     title: boomerang 2.0 categorizing and ranking requester tasks
@@ -3026,11 +3323,11 @@ query: why is stanford rated high in school ranking
   url: https://ed.stanford.edu/sites/default/files/partnership_schools_initiative.pdf
     title: stanford university's school of education prepares teachers in collaboration with local eleven professional development school
     debug: 
-  url: http://tusb.stanford.edu/tag/rankings
-    title: rankings the unofficial stanford blog
-    debug: 
   url: http://pediatrics.stanford.edu/content/dam/sm/pediatrics/documents/NEWS/2016LPCH-USNews.pdf
     title: june 21 2016 announcement lucile packard children's hospital stanford named to us news & world report's 2016 17 best chi
+    debug: 
+  url: http://tusb.stanford.edu/tag/rankings
+    title: rankings the unofficial stanford blog
     debug: 
   url: http://web.stanford.edu/group/bridgeproject/definingthetop/definingthetop.pdf
     title: defining the top of the class a new admissions game
@@ -3066,6 +3363,9 @@ query: career services
   url: http://med.stanford.edu/careercenter/about/message_director.html
     title: message from the director career center stanford university school of medicine
     debug: 
+  url: https://law.stanford.edu/careers/
+    title: careers stanford law school
+    debug: 
 query: how much does parking cost per day 
   url: https://transportation.stanford.edu/parking
     title: parking stanford parking & transportation services
@@ -3090,6 +3390,9 @@ query: how much does parking cost per day
     debug: 
   url: https://golfcourse.stanford.edu/fees_policies.htm
     title: stanfordgolfcourse com
+    debug: 
+  url: https://transportation.stanford.edu/commute-club/enjoy-membership-rewards/carpool-credit
+    title: carpool credit stanford parking & transportation services
     debug: 
 query: best cs classes to take 
   url: https://web.stanford.edu/group/ughb/cgi-bin/handbook/index.php/Computer_Science_Program
@@ -3119,6 +3422,9 @@ query: best cs classes to take
   url: https://www-cs.stanford.edu/past-newsletters/2012
     title: 2012 stanford computer science
     debug: 
+  url: http://online.stanford.edu/course/computer-science-101-self-paced
+    title: computer science 101 self paced online
+    debug: 
 query: nlp group stanford 
   url: http://nlp.stanford.edu/
     title: the stanford natural language processing group
@@ -3142,6 +3448,9 @@ query: nlp group stanford
     title: the stanford natural language processing group
     debug: 
   url: http://nlp.stanford.edu/software/regexner.html
+    title: the stanford natural language processing group
+    debug: 
+  url: http://nlp.stanford.edu/software/tagger.shtml
     title: the stanford natural language processing group
     debug: 
 query: dawson engler 
@@ -3169,6 +3478,9 @@ query: dawson engler
   url: https://web.stanford.edu/~engler/dpf-sigcomm96.ps
     title: dpf fast flexible message demultiplexing using dynamic code generation
     debug: 
+  url: https://web.stanford.edu/~engler/msthesis.ps
+    title: the design and implementation of a prototype exokernel operating system
+    debug: 
 query: club sports teams 
   url: https://web.stanford.edu/dept/pe/cgi-bin/wp-content/uploads/2009/06/club-sports-manual-2011-2012-copy.pdf
     title: clubsports stanford edu
@@ -3193,6 +3505,9 @@ query: club sports teams
     debug: 
   url: https://explorecourses.stanford.edu/search?q=ATHLETIC&view=catalog&academicYear=&filter-departmentcode-ATHLETIC=on&filter-coursestatus-Active=on&filter-term-Autumn=on&filter-term-Winter=on&filter-term-Spring=on&filter-term-Summer=on&page=0
     title: stanford university explore courses
+    debug: 
+  url: https://web.stanford.edu/group/cycling/join/
+    title: join us stanford cycling team
     debug: 
 query: which cafe is open on weekends in stanford 
   url: http://tusb.stanford.edu/2011/02/the-cool-cafe-beyond-the-gates-of-hell.html
@@ -3222,6 +3537,9 @@ query: which cafe is open on weekends in stanford
   url: https://rde.stanford.edu/hospitality/stanford-guest-house/dining
     title: stanford guest house dining stanford r&de
     debug: 
+  url: https://rde.stanford.edu/hospitality/union-square-tresidder-memorial
+    title: union square tresidder memorial stanford r&de
+    debug: 
 query: helpsu ticket request 
   url: https://helpsu.stanford.edu/
     title: helpsu stanford help request system
@@ -3249,4 +3567,7 @@ query: helpsu ticket request
     debug: 
   url: https://uit.stanford.edu/service/remedy
     title: request tracking helpsu remedy university it
+    debug: 
+  url: https://stutech-help.stanford.edu/hc/en-us/articles/207412183-How-do-I-get-connected-to-the-network-
+    title: how do i get connected to the network student technology help
     debug: 
