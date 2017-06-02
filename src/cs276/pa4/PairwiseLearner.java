@@ -1,19 +1,12 @@
 package cs276.pa4;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.*;
 
-import com.sun.tools.doclint.HtmlTag;
 import weka.classifiers.Classifier;
 import weka.classifiers.functions.LibSVM;
-import weka.classifiers.functions.LinearRegression;
 import weka.core.*;
-import weka.core.converters.CSVSaver;
 import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.Standardize;
-import weka.filters.unsupervised.instance.RemoveWithValues;
-import weka.filters.unsupervised.instance.Resample;
 
 /**
  * Implements Pairwise learner that can be used to train SVM
@@ -214,39 +207,112 @@ public class PairwiseLearner extends Learner {
         // read the test data...
         Instances testInstance = tf.features;
         Map<Query, List<Document>> rankings = new HashMap<>();
-        Map<Query, Map<Pair<Integer,Integer>, Integer>> pairwise_map = tf.pairwise_index_map;
+        Map<Query, Map<Pair<Document, Document>, Integer>> pairwise_map = tf.pairwise_index_map;
+
+        Map<Document, Integer> documentCountMap = new TreeMap<>();
 
         for (Query q : pairwise_map.keySet()) {
-            Map<Pair<Integer,Integer>, Integer> ind_map = pairwise_map.get(q);
 
-            List<Pair<Document, Double>> list = new ArrayList<>();
-            for (Document d : documentMap.keySet()) {
+            Map<Pair<Document, Document>, Integer> ind_map = pairwise_map.get(q);
+
+            for (Pair<Document, Document> documentPair : ind_map.keySet()) {
                 double prediction = Double.MIN_VALUE;
-                Integer index = documentMap.get(d);
+                Integer index = ind_map.get(documentPair);
                 try {
                     prediction = model.classifyInstance(testInstance.get(index));
+                    if (prediction == 0) {
+
+                        incrementOrInit(documentCountMap, documentPair.getFirst());
+//                        documentCountMap.put(documentPair.getFirst(), )
+                    } else {
+                        incrementOrInit(documentCountMap, documentPair.getSecond());
+
+                    }
+
                 } catch (Exception e) {
-                    System.err.println("Error classifying " + d.url);
+                    System.err.println("Error classifying " + documentPair.getFirst().url + " and " + documentPair.getSecond());
                 }
-                Pair<Document, Double> p = new Pair<>(d, prediction);
-                list.add(p);
+
             }
-            list.sort(new Comparator<Pair<Document, Double>>() {
-                @Override
-                public int compare(Pair<Document, Double> o1, Pair<Document, Double> o2) {
-                    return o2.getSecond().compareTo(o1.getSecond());
-                }
-            });
-            List<Document> documentList = new ArrayList<>();
-            for (Pair<Document, Double> pair : list) {
-                documentList.add(pair.getFirst());
-            }
+
+//            List<Pair<Document, Double>> list = new ArrayList<>();
+//            for (Document d : documentMap.keySet()) {
+//                double prediction = Double.MIN_VALUE;
+//                Integer index = documentMap.get(d);
+//                try {
+//                    prediction = model.classifyInstance(testInstance.get(index));
+//                } catch (Exception e) {
+//                    System.err.println("Error classifying " + d.url);
+//                }
+//                Pair<Document, Double> p = new Pair<>(d, prediction);
+//                list.add(p);
+//            }
+//            list.sort(new Comparator<Pair<Document, Double>>() {
+//                @Override
+//                public int compare(Pair<Document, Double> o1, Pair<Document, Double> o2) {
+//                    return o2.getSecond().compareTo(o1.getSecond());
+//                }
+//            });
+//            List<Document> documentList = new ArrayList<>();
+//            for (Pair<Document, Double> pair : list) {
+//                documentList.add(pair.getFirst());
+//            }
+            //sort the map by value..
+            Map<Document, Integer> sortedDocuments = sortByValue(documentCountMap);
+            //add all the keys (Documents) to list...
+            ArrayList<Document> documentList = new ArrayList<>(sortedDocuments.keySet());
+//            sortedDocuments.
+
+//            for (Document document: documentCountMap.keySet()) {
+//                documentList.add(document);
+//            }
             rankings.put(q, documentList);
         }
 
         return rankings;
     }
+
 /*
+=======
+
+
+    private static <K, V extends Comparable<? super V>> Map<K, V>
+    sortByValue( Map<K, V> map )
+    {
+        List<Map.Entry<K, V>> list =
+                new LinkedList<>( map.entrySet() );
+        Collections.sort( list, new Comparator<Map.Entry<K, V>>()
+        {
+            @Override
+            public int compare( Map.Entry<K, V> o1, Map.Entry<K, V> o2 )
+            {
+                return ( o1.getValue() ).compareTo( o2.getValue() );
+            }
+        } );
+
+        Map<K, V> result = new LinkedHashMap<>();
+        for (Map.Entry<K, V> entry : list)
+        {
+            result.put( entry.getKey(), entry.getValue() );
+        }
+        return result;
+    }
+
+    static <K,V extends Comparable<? super V>>
+    SortedSet<Map.Entry<K,V>> entriesSortedByValues(Map<K,V> map) {
+        SortedSet<Map.Entry<K,V>> sortedEntries = new TreeSet<Map.Entry<K,V>>(
+                new Comparator<Map.Entry<K,V>>() {
+                    @Override public int compare(Map.Entry<K,V> e1, Map.Entry<K,V> e2) {
+                        int res = e1.getValue().compareTo(e2.getValue());
+                        return res != 0 ? res : 1;
+                    }
+                }
+        );
+        sortedEntries.addAll(map.entrySet());
+        return sortedEntries;
+    }
+
+>>>>>>> b702a96439dd7f758a6250527d327cca4fa56d35
     private Instances documentPairInstances(Instances instances,
                                             String name, ArrayList<Attribute> attributes,
                                             String newAttName, Map<Query, List<Integer>> queryInstanceListMap) {
@@ -263,7 +329,20 @@ public class PairwiseLearner extends Learner {
         dataset = addClassLabel(dataset, name, attributes, newAttName);
         return dataset;
     }
+<<<<<<< HEAD
 */
+=======
+
+    private void incrementOrInit(Map<Document, Integer> documentCountMap, Document key) {
+
+        if (documentCountMap.get(key)==null) {
+            documentCountMap.put(key, 1);
+        } else {
+            documentCountMap.put(key, documentCountMap.get(key) + 1);
+        }
+
+    }
+>>>>>>> b702a96439dd7f758a6250527d327cca4fa56d35
 
     private double[] instanceDiff(Instance inst1, Instance inst2) {
         double[] arr1 = inst1.toDoubleArray();
