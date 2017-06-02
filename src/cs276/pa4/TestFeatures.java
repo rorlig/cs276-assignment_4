@@ -18,7 +18,7 @@ public class TestFeatures {
      *   features.get(index_map.get(query).get(doc));
      * */
     Map<Query, Map<Document, Integer>> index_map;
-    Map<Query, Map<Pair<Integer, Integer>, Integer>> pairwise_index_map;
+    Map<Query, Map<Pair<Document, Document>, Integer>> pairwise_index_map;
 
     /*
     {q1:{<d1,d2>:1, <d2,d3>:2, <d3,d4>:3}, q1 -> d1,d2,d3
