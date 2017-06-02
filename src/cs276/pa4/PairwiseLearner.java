@@ -283,9 +283,9 @@ public class PairwiseLearner extends Learner {
             ArrayList<Document> documentList = new ArrayList<>(sortedDocuments.keySet());
 
 
-            if (q.query.equals("cs 276")){
-                System.out.println(documentList);
-            }
+//            if (q.query.equals("cs 276")){
+//                System.out.println(documentList);
+//            }
 //            sortedDocuments.
 
 //            for (Document document: documentCountMap.keySet()) {

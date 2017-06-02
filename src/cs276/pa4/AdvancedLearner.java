@@ -132,8 +132,11 @@ public class AdvancedLearner extends Learner {
     @Override
     public TestFeatures extractTestFeatures(String test_data_file,
                                             Map<String, Double> idfs) {
+
         try {
             Map<Query, List<Document>> testData = Util.loadTrainData(test_data_file);
+            Map<Query, Map<String, Document>> queryDict = LoadHandler.loadTrainData(test_data_file);
+
             Instances dataset = null;
       /* Build attributes list */
             ArrayList<Attribute> attributes = new ArrayList<Attribute>();
@@ -154,7 +157,7 @@ public class AdvancedLearner extends Learner {
             for (Query q : testData.keySet()) {
                 List<Integer> instanceList = new ArrayList<>();
                 for (Document d : testData.get(q)) {
-                    double[] feat = feature.extractFeatureVector(d, q);
+                    double[] feat = feature.extractMoreFeatures(d, q, queryDict);
                     instanceList.add(index);
                     dataset.add(new DenseInstance(1.0,
                             feature.addPreictedVarToFeatureVec(feat,
@@ -288,9 +291,9 @@ public class AdvancedLearner extends Learner {
             ArrayList<Document> documentList = new ArrayList<>(sortedDocuments.keySet());
 
 
-            if (q.query.equals("cs 276")){
-                System.out.println(documentList);
-            }
+//            if (q.query.equals("cs 276")){
+//                System.out.println(documentList);
+//            }
 //            sortedDocuments.
 
 //            for (Document document: documentCountMap.keySet()) {
