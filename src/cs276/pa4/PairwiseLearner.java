@@ -98,18 +98,19 @@ public class PairwiseLearner extends Learner {
         }
         Instances diff_dataset=new Instances("diff_dataset",attributes,0);
         //building document pair indexes
-        Map<Query, Map<Pair<Integer,Integer>, Integer>> pairwise_map=new HashMap<>();
+        Map<Query, Map<Pair<Document,Document>, Integer>> pairwise_map=new HashMap<>();
 
         index=0;
         for (Query q: queryInstanceListMap.keySet()){
-            Map<Pair<Integer, Integer>, Integer> dMap = new HashMap<>();
+            Map<Pair<Document, Document>, Integer> dMap = new HashMap<>();
             List<Integer> instance_indx=queryInstanceListMap.get(q);
             int indx_size=instance_indx.size();
             for(int i=0;i<indx_size-1;i++){
                 for (int j=i+1;j<indx_size;j++){
                     diff_dataset.add(new DenseInstance(1.0, instanceDiff(dataset.get(instance_indx.get(i)),
                             dataset.get(instance_indx.get(j)))));
-                    Pair<Integer, Integer> doc_Pair = new Pair(i,j);
+                    Pair<Document, Document> doc_Pair = new Pair(queryDocData.get(q).get(i),
+                            queryDocData.get(q).get(j));
                     dMap.put(doc_Pair,index);
                     index++;
                 }
@@ -149,8 +150,6 @@ public class PairwiseLearner extends Learner {
             attributes.add(new Attribute("relevance_score"));
             dataset = new Instances("test_dataset", attributes, 0);
 
-            Map<Query, Map<Pair<Integer, Integer>, Integer>> pairwise_index_map = new HashMap<>();
-
             Feature feature = new Feature(idfs);
             int index = 0;
             Map<Query, List<Integer>> queryInstanceListMap = new HashMap<>();
@@ -168,25 +167,27 @@ public class PairwiseLearner extends Learner {
                 queryInstanceListMap.put(q, instanceList);
             }
 
-            //Standardize the data
+            /*
             Standardize filter = new Standardize();
             filter.setInputFormat(dataset);
             dataset = Filter.useFilter(dataset, filter);
+            */
 
             Instances diff_dataset=new Instances("diff_dataset",attributes,0);
             //building document pair indexes
-            Map<Query, Map<Pair<Integer,Integer>, Integer>> pairwise_map=new HashMap<>();
+            Map<Query, Map<Pair<Document,Document>, Integer>> pairwise_map=new HashMap<>();
 
             index=0;
             for (Query q: queryInstanceListMap.keySet()){
-                Map<Pair<Integer, Integer>, Integer> dMap = new HashMap<>();
+                Map<Pair<Document, Document>, Integer> dMap = new HashMap<>();
                 List<Integer> instance_indx=queryInstanceListMap.get(q);
                 int indx_size=instance_indx.size();
                 for(int i=0;i<indx_size-1;i++){
                     for (int j=i+1;j<indx_size;j++){
                         diff_dataset.add(new DenseInstance(1.0, instanceDiff(dataset.get(instance_indx.get(i)),
                                 dataset.get(instance_indx.get(j)))));
-                        Pair<Integer, Integer> doc_Pair = new Pair(i,j);
+                        Pair<Document, Document> doc_Pair = new Pair(testData.get(q).get(i),
+                                testData.get(q).get(j));
                         dMap.put(doc_Pair,index);
                         index++;
                     }
@@ -245,7 +246,7 @@ public class PairwiseLearner extends Learner {
 
         return rankings;
     }
-
+/*
     private Instances documentPairInstances(Instances instances,
                                             String name, ArrayList<Attribute> attributes,
                                             String newAttName, Map<Query, List<Integer>> queryInstanceListMap) {
@@ -262,7 +263,7 @@ public class PairwiseLearner extends Learner {
         dataset = addClassLabel(dataset, name, attributes, newAttName);
         return dataset;
     }
-
+*/
 
     private double[] instanceDiff(Instance inst1, Instance inst2) {
         double[] arr1 = inst1.toDoubleArray();
