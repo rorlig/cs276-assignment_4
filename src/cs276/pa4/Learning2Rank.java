@@ -40,7 +40,8 @@ public class Learning2Rank {
             learner = new PointwiseLearner();
         } else if (task == 2) {
             boolean isLinearKernel = true;
-            learner = new PairwiseLearner(isLinearKernel);
+
+            learner = new PairwiseLearner(2, 0.015625, false);
         } else if (task == 3) {
       
       /* 
@@ -161,7 +162,7 @@ public class Learning2Rank {
         Classifier model = train(train_signal_file, train_rel_file, task, idfs);
     /* performance on the training data */
         Map<Query, List<Document>> trained_ranked_queries = test(train_signal_file, model, task, idfs);
-        String trainOutFile = "tmp.train.ranked";
+        String trainOutFile = "tmp.train.ranked1";
         writeRankedResultsToFile(trained_ranked_queries, new PrintStream(new FileOutputStream(trainOutFile)));
         NdcgMain ndcg = new NdcgMain(train_rel_file);
         System.err.println("# Trained NDCG=" + ndcg.score(trainOutFile));

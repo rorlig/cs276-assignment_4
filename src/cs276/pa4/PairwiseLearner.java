@@ -81,14 +81,14 @@ public class PairwiseLearner extends Learner {
 
             queryInstanceListMap.put(q, instanceList);
         }
-        //Standardize the data
-        Standardize filter = new Standardize();
-        try {
-            filter.setInputFormat(dataset);
-            dataset = Filter.useFilter(dataset, filter);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        //Standardize the data
+//        Standardize filter = new Standardize();
+//        try {
+//            filter.setInputFormat(dataset);
+//            dataset = Filter.useFilter(dataset, filter);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
         Instances diff_dataset=new Instances("diff_dataset",attributes,0);
         //building document pair indexes
         Map<Query, Map<Pair<Document,Document>, Integer>> pairwise_map=new HashMap<>();
@@ -157,6 +157,7 @@ public class PairwiseLearner extends Learner {
                     index++;
                 }
 
+//                System.out.println("query doc list " + testData.get(q).size() + " instance list size " + instanceList.size());
                 queryInstanceListMap.put(q, instanceList);
             }
 
@@ -175,12 +176,21 @@ public class PairwiseLearner extends Learner {
                 Map<Pair<Document, Document>, Integer> dMap = new HashMap<>();
                 List<Integer> instance_indx=queryInstanceListMap.get(q);
                 int indx_size=instance_indx.size();
+//                System.out.println("indx_size " + indx_size + " testdata query list size " + testData.get(q).size() );
+
                 for(int i=0;i<indx_size-1;i++){
                     for (int j=i+1;j<indx_size;j++){
+
+                        // instance index
                         diff_dataset.add(new DenseInstance(1.0, instanceDiff(dataset.get(instance_indx.get(i)),
                                 dataset.get(instance_indx.get(j)))));
+
+
                         Pair<Document, Document> doc_Pair = new Pair(testData.get(q).get(i),
                                 testData.get(q).get(j));
+
+
+
                         dMap.put(doc_Pair,index);
                         index++;
                     }
@@ -209,9 +219,10 @@ public class PairwiseLearner extends Learner {
         Map<Query, List<Document>> rankings = new HashMap<>();
         Map<Query, Map<Pair<Document, Document>, Integer>> pairwise_map = tf.pairwise_index_map;
 
-        Map<Document, Integer> documentCountMap = new TreeMap<>();
+
 
         for (Query q : pairwise_map.keySet()) {
+            Map<Document, Integer> documentCountMap = new HashMap<>();
 
             Map<Pair<Document, Document>, Integer> ind_map = pairwise_map.get(q);
 
@@ -230,7 +241,8 @@ public class PairwiseLearner extends Learner {
                     }
 
                 } catch (Exception e) {
-                    System.err.println("Error classifying " + documentPair.getFirst().url + " and " + documentPair.getSecond());
+//                    System.err.println(e);
+//                    System.err.println("Error classifying " + documentPair.getFirst().url + " and " + documentPair.getSecond());
                 }
 
             }
@@ -259,8 +271,21 @@ public class PairwiseLearner extends Learner {
 //            }
             //sort the map by value..
             Map<Document, Integer> sortedDocuments = sortByValue(documentCountMap);
+
+//            System.out.println(sortedDocuments.getClass());
+
+//            System.out.println(sortedDocuments);
+
+//            for (Document d: sortedDocuments.keySet()) {
+//
+//            }
             //add all the keys (Documents) to list...
             ArrayList<Document> documentList = new ArrayList<>(sortedDocuments.keySet());
+
+
+            if (q.query.equals("cs 276")){
+                System.out.println(documentList);
+            }
 //            sortedDocuments.
 
 //            for (Document document: documentCountMap.keySet()) {
@@ -285,7 +310,7 @@ public class PairwiseLearner extends Learner {
             @Override
             public int compare( Map.Entry<K, V> o1, Map.Entry<K, V> o2 )
             {
-                return ( o1.getValue() ).compareTo( o2.getValue() );
+                return ( o2.getValue() ).compareTo( o1.getValue() );
             }
         } );
 
@@ -423,14 +448,14 @@ public class PairwiseLearner extends Learner {
 
         if(negGroup){
             result=negative;
-            Random random=new Random(1000);
+            Random random=new Random(10010);
             for(int k=0;k<eachGroup;k++){
                 int r=random.nextInt(positive.size());
                 result.add(positive.instance(r));
             }
         }else{
             result=positive;
-            Random random=new Random(1000);
+            Random random=new Random(10003);
             for(int k=0;k<eachGroup;k++){
                 int r=random.nextInt(negative.size());
                 result.add(negative.instance(r));
