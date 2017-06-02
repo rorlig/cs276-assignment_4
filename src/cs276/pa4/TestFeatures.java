@@ -19,4 +19,10 @@ public class TestFeatures {
      * */
     Map<Query, Map<Document, Integer>> index_map;
     Map<Query, Map<Pair<Integer, Integer>, Integer>> pairwise_index_map;
+
+    /*
+    {q1:{<d1,d2>:1, <d2,d3>:2, <d3,d4>:3}, q1 -> d1,d2,d3
+
+        q2:{<d5,d6>:4, <d7:d8>:5}}
+        */
 }
