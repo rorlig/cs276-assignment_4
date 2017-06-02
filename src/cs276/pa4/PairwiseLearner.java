@@ -272,8 +272,7 @@ public class PairwiseLearner extends Learner {
         return rankings;
     }
 
-/*
-=======
+
 
 
     private static <K, V extends Comparable<? super V>> Map<K, V>
@@ -311,8 +310,8 @@ public class PairwiseLearner extends Learner {
         sortedEntries.addAll(map.entrySet());
         return sortedEntries;
     }
+/*
 
->>>>>>> b702a96439dd7f758a6250527d327cca4fa56d35
     private Instances documentPairInstances(Instances instances,
                                             String name, ArrayList<Attribute> attributes,
                                             String newAttName, Map<Query, List<Integer>> queryInstanceListMap) {
@@ -329,9 +328,9 @@ public class PairwiseLearner extends Learner {
         dataset = addClassLabel(dataset, name, attributes, newAttName);
         return dataset;
     }
-<<<<<<< HEAD
+
 */
-=======
+
 
     private void incrementOrInit(Map<Document, Integer> documentCountMap, Document key) {
 
@@ -342,7 +341,6 @@ public class PairwiseLearner extends Learner {
         }
 
     }
->>>>>>> b702a96439dd7f758a6250527d327cca4fa56d35
 
     private double[] instanceDiff(Instance inst1, Instance inst2) {
         double[] arr1 = inst1.toDoubleArray();

@@ -112,7 +112,7 @@ public class Learning2Rank {
     /**
      * Output the ranking results in expected format
      *
-     * @param ranked_queries
+     *
      * @param ps
      */
     public static void writeRankedResultsToFile(Map<Query, List<Document>> queryRankings, PrintStream ps) {
