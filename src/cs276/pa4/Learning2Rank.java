@@ -39,11 +39,11 @@ public class Learning2Rank {
         if (task == 1) {
             learner = new PointwiseLearner();
         } else if (task == 2) {
-            boolean isLinearKernel = true;
-            learner = new PairwiseLearner(2, 0.015625, true);
+            boolean isLinearKernel = false;
+            learner = new PairwiseLearner(2, 0.015625, isLinearKernel);
         } else if (task == 3) {
-            boolean isLinearKernel = true;
-            learner = new AdvancedLearner(2, 0.015625, true);
+            boolean isLinearKernel = false;
+            learner = new AdvancedLearner(2, 0.015625, isLinearKernel);
       /* 
        * @TODO: Your code here, add more features 
        * */
@@ -83,11 +83,11 @@ public class Learning2Rank {
         if (task == 1) {
             learner = new PointwiseLearner();
         } else if (task == 2) {
-            boolean isLinearKernel = true;
-            learner = new PairwiseLearner(2, 0.015625, true);
+            boolean isLinearKernel = false;
+            learner = new PairwiseLearner(2, 0.015625, isLinearKernel);
         } else if (task == 3) {
-            boolean isLinearKernel = true;
-            learner = new AdvancedLearner(2, 0.015625, true);
+            boolean isLinearKernel = false;
+            learner = new AdvancedLearner(2, 0.015625, isLinearKernel);
       /* 
        * @TODO: Your code here, add more features 
        * */

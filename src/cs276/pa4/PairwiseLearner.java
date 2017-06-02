@@ -82,13 +82,13 @@ public class PairwiseLearner extends Learner {
             queryInstanceListMap.put(q, instanceList);
         }
 //        //Standardize the data
-//        Standardize filter = new Standardize();
-//        try {
-//            filter.setInputFormat(dataset);
-//            dataset = Filter.useFilter(dataset, filter);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        Standardize filter = new Standardize();
+        try {
+            filter.setInputFormat(dataset);
+            dataset = Filter.useFilter(dataset, filter);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         Instances diff_dataset=new Instances("diff_dataset",attributes,0);
         //building document pair indexes
         Map<Query, Map<Pair<Document,Document>, Integer>> pairwise_map=new HashMap<>();
@@ -161,11 +161,10 @@ public class PairwiseLearner extends Learner {
                 queryInstanceListMap.put(q, instanceList);
             }
 
-            /*
+
             Standardize filter = new Standardize();
             filter.setInputFormat(dataset);
             dataset = Filter.useFilter(dataset, filter);
-            */
 
             Instances diff_dataset=new Instances("diff_dataset",attributes,0);
             //building document pair indexes
