@@ -1,10 +1,9 @@
 package cs276.pa4;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.*;
 
 public class Feature {
 
@@ -22,6 +21,7 @@ public class Feature {
     public Feature(Map<String, Double> idfs) {
         this.idfs = idfs;
     }
+
 
     public double[] extractFeatureVector(Document d, Query q) {
     
@@ -110,13 +110,35 @@ public class Feature {
     public double[] extractMoreFeatures(Document d, Query q, Map<Query, Map<String, Document>> dataMap) {
 
         double[] basic = extractFeatureVector(d, q);
-        double[] more = null;
-
-        //Additional features et added here:
-    /*
-     * @TODO: Your code here
-     */
-        return null;
+        //double[] bm25=calculateBM25Weights(d,q);
+        double[] others={d.page_rank,new SmallestWindowScorer(idfs).getSimScore(d,q),
+                new BM25Scorer(idfs,dataMap).getSimScore(d,q)};
+        double[] result=new double[basic.length+others.length];
+        for(int i=0;i<basic.length;i++)
+            result[i]=basic[i];
+        for(int j=basic.length;j<result.length;j++)
+            result[j]=others[j-basic.length];
+        return result;
     }
-
+    private double[] calculateBM25Weights(Document d, Query q){
+        Map<String, Map<String, Double>> tfs = Util.getDocTermFreqs(d, q);
+        Map<String, Double> queryVector = getQueryVec(q);
+        this.normalizeTFs(tfs,d,q);
+        int k=1;
+        double[] scores=new double[5];
+        double[] bm25Weights={0.75,1.0,0.2,0.8,0.8}; //url, title, body. header, anchor
+        for (int i=0;i<scores.length;i++)
+            scores[i]=0.0;
+        for (String word:q.queryWords) {
+            double queryScore = queryVector.get(word);
+            scores[0] += queryScore*tfs.get("url").get(word)*(k+1)/(k+tfs.get("url").get(word)*queryScore);
+            scores[1] += queryScore*tfs.get("title").get(word)*(k+1)/(k+tfs.get("title").get(word)*queryScore);
+            scores[2] += queryScore*tfs.get("body").get(word)*(k+1)/(k+tfs.get("body").get(word)*queryScore);
+            scores[3] += queryScore*tfs.get("header").get(word)*(k+1)/(k+tfs.get("header").get(word)*queryScore);
+            scores[4] += queryScore*tfs.get("anchor").get(word)*(k+1)/(k+tfs.get("anchor").get(word)*queryScore);
+        }
+        for(int i=0;i<scores.length;i++)
+            scores[i]*=bm25Weights[i];
+        return scores;
+    }
 }
