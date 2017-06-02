@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
+import com.sun.tools.doclint.HtmlTag;
 import weka.classifiers.Classifier;
 import weka.classifiers.functions.LibSVM;
 import weka.classifiers.functions.LinearRegression;
@@ -95,22 +96,30 @@ public class PairwiseLearner extends Learner {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        dataset = documentPairInstances(dataset, "train_dataset", attributes, "relevance", queryInstanceListMap);
+        Instances diff_dataset=new Instances("diff_dataset",attributes,0);
+        //building document pair indexes
+        Map<Query, Map<Pair<Integer,Integer>, Integer>> pairwise_map=new HashMap<>();
 
-        /* Set last attribute as target */
-        dataset.setClassIndex(dataset.numAttributes() - 1);
-        dataset.stratify(2);
-        Instances sample=dataset.trainCV(2,1);
-        /*
-        CSVSaver saver = new CSVSaver();
-        try {
-            saver.setFile(new File("sample.csv"));
-            saver.setInstances(sample);
-            saver.writeBatch();
-        } catch (IOException e) {
-            e.printStackTrace();
+        index=0;
+        for (Query q: queryInstanceListMap.keySet()){
+            Map<Pair<Integer, Integer>, Integer> dMap = new HashMap<>();
+            List<Integer> instance_indx=queryInstanceListMap.get(q);
+            int indx_size=instance_indx.size();
+            for(int i=0;i<indx_size-1;i++){
+                for (int j=i+1;j<indx_size;j++){
+                    diff_dataset.add(new DenseInstance(1.0, instanceDiff(dataset.get(instance_indx.get(i)),
+                            dataset.get(instance_indx.get(j)))));
+                    Pair<Integer, Integer> doc_Pair = new Pair(i,j);
+                    dMap.put(doc_Pair,index);
+                    index++;
+                }
+            }
+            pairwise_map.put(q,dMap);
         }
-        */
+        diff_dataset=addClassLabel(diff_dataset,"train",attributes,"relevance");
+        //diff_dataset.setClassIndex(diff_dataset.numAttributes()-1);
+        Instances sample=balanceTestCases(diff_dataset);
+        sample.setClassIndex(sample.numAttributes()-1);
         return sample;
     }
 
@@ -140,21 +149,19 @@ public class PairwiseLearner extends Learner {
             attributes.add(new Attribute("relevance_score"));
             dataset = new Instances("test_dataset", attributes, 0);
 
-            Map<Query, Map<Document, Integer>> indexMap = new HashMap<>();
+            Map<Query, Map<Pair<Integer, Integer>, Integer>> pairwise_index_map = new HashMap<>();
 
-            int index = 0;
             Feature feature = new Feature(idfs);
+            int index = 0;
             Map<Query, List<Integer>> queryInstanceListMap = new HashMap<>();
             for (Query q : testData.keySet()) {
                 List<Integer> instanceList = new ArrayList<>();
-                indexMap.put(q, new HashMap<Document, Integer>());
                 for (Document d : testData.get(q)) {
                     double[] feat = feature.extractFeatureVector(d, q);
                     instanceList.add(index);
                     dataset.add(new DenseInstance(1.0,
                             feature.addPreictedVarToFeatureVec(feat,
                                     0.0D)));
-                    indexMap.get(q).put(d, index);
                     index++;
                 }
 
@@ -166,11 +173,32 @@ public class PairwiseLearner extends Learner {
             filter.setInputFormat(dataset);
             dataset = Filter.useFilter(dataset, filter);
 
-            dataset = documentPairInstances(dataset, "test_dataset", attributes, "relevance", queryInstanceListMap);
-            dataset.setClassIndex(dataset.numAttributes()-1);
+            Instances diff_dataset=new Instances("diff_dataset",attributes,0);
+            //building document pair indexes
+            Map<Query, Map<Pair<Integer,Integer>, Integer>> pairwise_map=new HashMap<>();
+
+            index=0;
+            for (Query q: queryInstanceListMap.keySet()){
+                Map<Pair<Integer, Integer>, Integer> dMap = new HashMap<>();
+                List<Integer> instance_indx=queryInstanceListMap.get(q);
+                int indx_size=instance_indx.size();
+                for(int i=0;i<indx_size-1;i++){
+                    for (int j=i+1;j<indx_size;j++){
+                        diff_dataset.add(new DenseInstance(1.0, instanceDiff(dataset.get(instance_indx.get(i)),
+                                dataset.get(instance_indx.get(j)))));
+                        Pair<Integer, Integer> doc_Pair = new Pair(i,j);
+                        dMap.put(doc_Pair,index);
+                        index++;
+                    }
+                }
+                pairwise_map.put(q,dMap);
+            }
+            diff_dataset=addClassLabel(diff_dataset,"test",attributes,"relevance");
+            diff_dataset.setClassIndex(diff_dataset.numAttributes()-1);
+
             TestFeatures tf = new TestFeatures();
-            tf.features = dataset;
-            tf.index_map = indexMap;
+            tf.features = diff_dataset;
+            tf.pairwise_index_map = pairwise_map;
             return tf;
 
         } catch (Exception e) {
@@ -182,15 +210,14 @@ public class PairwiseLearner extends Learner {
     @Override
     public Map<Query, List<Document>> testing(TestFeatures tf,
                                               Classifier model) {
-        System.out.println("========Testing======");
         // read the test data...
         Instances testInstance = tf.features;
         Map<Query, List<Document>> rankings = new HashMap<>();
-        Map<Query, Map<Document, Integer>> indexMap = tf.index_map;
+        Map<Query, Map<Pair<Integer,Integer>, Integer>> pairwise_map = tf.pairwise_index_map;
 
-        for (Query q : indexMap.keySet()) {
+        for (Query q : pairwise_map.keySet()) {
+            Map<Pair<Integer,Integer>, Integer> ind_map = pairwise_map.get(q);
 
-            Map<Document, Integer> documentMap = indexMap.get(q);
             List<Pair<Document, Double>> list = new ArrayList<>();
             for (Document d : documentMap.keySet()) {
                 double prediction = Double.MIN_VALUE;
@@ -222,6 +249,7 @@ public class PairwiseLearner extends Learner {
     private Instances documentPairInstances(Instances instances,
                                             String name, ArrayList<Attribute> attributes,
                                             String newAttName, Map<Query, List<Integer>> queryInstanceListMap) {
+
         Instances dataset = new Instances(name, attributes, 0);
         for (Query query : queryInstanceListMap.keySet()) {
             for (int i=0;i<queryInstanceListMap.get(query).size()-1;i++) {
@@ -290,45 +318,48 @@ public class PairwiseLearner extends Learner {
         return dataset;
     }
 
-    private Instances sample(Instances instances) {
-        //rec indicate the number of records in each class
-        Instances result = null;
-        try {
-            RemoveWithValues filter = new RemoveWithValues();
+    private Instances balanceTestCases(Instances instances){
+        ArrayList<Attribute> attribs=new ArrayList<>();
+        Enumeration<Attribute> enumeration=instances.enumerateAttributes();
+        while(enumeration.hasMoreElements())
+            attribs.add(enumeration.nextElement());
 
-            String[] options = {"-C", Integer.toString(instances.numAttributes() - 1),
-                    "-L", "0"};
-            filter.setOptions(options);
-            filter.setInputFormat(instances);
-            Instances positive = Filter.useFilter(instances, filter);
+        Instances positive = new Instances("positive",attribs,0);
+        Instances negative = new Instances("negative",attribs,0);
+        Instances result = new Instances("balance",attribs,0);
 
-            filter.setInvertSelection(true);
-            Instances negative=Filter.useFilter(instances,filter);
-            System.out.println(positive.size());
-            System.out.println(negative.size());
-            Double rec=100D;
-            if (positive.size()>negative.size())
-                rec*=(1.0*negative.size())/positive.size();
+        for(Instance i:instances){
+            double[] vals=i.toDoubleArray();
+            if (vals[vals.length-1]==0D) //index for +1
+                positive.add(i);
             else
-                rec*=(1.0*positive.size())/negative.size();
-            Resample resample = new Resample();
-            String[] ops = {"-S", "1000", "-Z", Double.toString(rec), "-no-replacement"};
-            resample.setOptions(ops);
-            if (positive.size()>negative.size()) {
-                resample.setInputFormat(positive);
-                result = Filter.useFilter(positive, resample);
-                for(Instance i:negative)
-                    result.add(i);
-            } else {
-                resample.setInputFormat(negative);
-                result = Filter.useFilter(negative, resample);
-                for(Instance i:positive)
-                    result.add(i);
+                negative.add(i);
+        }
+        int eachGroup=negative.size();
+        boolean negGroup=true;
+
+        if (positive.size()<negative.size()) {
+            eachGroup = positive.size();
+            negGroup=false;
+        }
+
+        if(negGroup){
+            result=negative;
+            Random random=new Random(1000);
+            for(int k=0;k<eachGroup;k++){
+                int r=random.nextInt(positive.size());
+                result.add(positive.instance(r));
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        }else{
+            result=positive;
+            Random random=new Random(1000);
+            for(int k=0;k<eachGroup;k++){
+                int r=random.nextInt(negative.size());
+                result.add(negative.instance(r));
+            }
         }
         return result;
+
     }
 
 }
